@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="roster" thread-count="2" parallel="tests">
+	<listeners>
+		<listener class-name="com.utilities.SeleniumListener">
+		</listener>
+	</listeners>
+	<!-- <test name="Firefox Browser">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.Flock.HydraAutomation.editCopyDeleteMessage">
+			</class>
+		</classes>
+	</test>   -->
+	<test name="Chorme Browser">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.Flock.HydraAutomation.editCopyDeleteMessage">
+			</class>
+		</classes>
+	</test>
+</suite>
