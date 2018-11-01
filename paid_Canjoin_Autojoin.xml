@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Paid CanjoinAutojoin" thread-count="2" parallel="tests">
+	<!-- <listeners>
+		<listener class-name="com.utilities.SeleniumListener">
+		</listener>
+	</listeners> -->
+ 	 <!-- <test name="Firefox Browser">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.flock.flyboardingAutomation.paidGoc">
+			</class>
+		</classes>
+	</test> --> 
+	<test name="CanJoinGOC">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.flock.flyboardingAutomation.paidCanjoinGoc">
+			</class>
+		</classes>
+	</test>
+	<test name="CanJoinNonGOC">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.flock.flyboardingAutomation.paidCanjoinNonGoc">
+			</class>
+		</classes>
+	</test>
+	<test name="AutoJoinNonGOC">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.flock.flyboardingAutomation.paidAutojoinNonGoc">
+			</class>
+		</classes>
+	</test>
+	<test name="AutoJoinGOC">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.flock.flyboardingAutomation.paidAutojoinGoc">
+			</class>
+		</classes>
+	</test>
+</suite>

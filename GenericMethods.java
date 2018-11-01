@@ -1,5 +1,9 @@
-package com.utilities;
+package com.flock.utilities;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -326,4 +330,16 @@ public void selectElement(By locator){
             logger.info("Not able to waitAndClick on the element");
         }
     }
+	
+	public static int getResponseCode(String url) throws MalformedURLException, IOException{
+	    HttpURLConnection.setFollowRedirects(true);
+	    HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
+	    con.setConnectTimeout(2);
+	    con.setRequestMethod("GET");
+	    int responseCode = con.getResponseCode();
+	    		if(con != null){
+	        con.disconnect();
+	    }
+	    return responseCode;
+	}
 }

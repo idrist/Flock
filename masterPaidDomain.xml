@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Paid Domain" thread-count="2" parallel="tests">
+	<!-- <listeners>
+		<listener class-name="com.utilities.SeleniumListener">
+		</listener>
+	</listeners> -->
+ 	 <!-- <test name="Firefox Browser">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.flock.flyboardingAutomation.paidGoc">
+			</class>
+		</classes>
+	</test> --> 
+	<test name="Paid GOC">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.flock.flyboardingAutomation.paidGoc">
+			</class>
+		</classes>
+	</test>
+	<test name="Paid Non GOC">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.flock.flyboardingAutomation.paidNonGoc">
+			</class>
+		</classes>
+	</test>
+</suite>
